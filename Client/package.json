@@ -2,6 +2,7 @@
   "name": "bikes",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://AdarshPawar29.github.io/Bike-Rent-App",
   "dependencies": {
     "@types/jest": "^22.2.3",
     "axios": "^0.18.0",
@@ -38,7 +39,9 @@
     "build": "react-scripts build && npm run copy",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "copy": "copyfiles build/** ../Server/src/public"
+    "copy": "copyfiles build/** ../Server/src/public",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.3",
@@ -47,6 +50,7 @@
     "enzyme-adapter-react-16": "^1.1.1",
     "eslint": "^4.19.1",
     "eslint-plugin-react": "^7.8.2",
+    "gh-pages": "^2.2.0",
     "react-test-renderer": "^16.4.1"
   }
 }
